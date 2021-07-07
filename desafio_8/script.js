@@ -57,19 +57,6 @@ for(let producto of pocoStock){
     document.body.appendChild(contenedor);           
 }
 
-//MENOS DE 3 PRODUCTOS
-
-var pocoStock = arrayProductos.filter(producto => producto.cantidad <= 3);
-document.write("<h3> Lista de Productos con poco Stock (menos de 3 unidades) </h3>");
-for (let producto of pocoStock) {
-    let contenedor = document.createElement("div");
-
-    contenedor.innerHTML =  ` <h3> Nombre: ${producto.nombre}</h3>
-                              <p>Cantidad: ${producto.cantidad}</p>
-                              <p>Detalle: ${producto.detalle}</p>`;
-document.body.appendChild(contenedor);
-}
-
 //SIN STOCK 
 
 var sinStock =arrayProductos.filter(producto => producto.cantidad == 0 || procducto.disponible == false);
